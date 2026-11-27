@@ -4,6 +4,8 @@ import accountRoutes from './routes/accounts.routes.js';
 import transactionsRouter from './routes/transactions.routes.js';
 import reportsRouter from './routes/reports.routes.js';
 import categoriesRouter from './routes/categories.routes.js';
+import { copilotBridge } from './copilot/bridge.js';
+// import { CopilotSidebar } from '@copilotkit/react-core/v2';
 
 const app = express();
 
@@ -25,6 +27,8 @@ app.use('/api/transactions', transactionsRouter);
 app.use('/api/reports', reportsRouter);
 
 app.use('/api/categories', categoriesRouter);
+
+app.use('/api/copilotkit', copilotBridge);
 
 // Runs when no route matched
 app.use((req, res) => {

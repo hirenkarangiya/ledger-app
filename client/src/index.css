@@ -13,6 +13,7 @@
   --purple-soft: #f1ebfe;
   --radius: 16px;
   --shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 6px 20px rgba(16, 24, 40, 0.05);
+  --black: #000000;
 }
 
 * {
@@ -31,6 +32,7 @@ h1, h2, h3, p {
 }
 
 .muted { color: var(--muted); }
+.black-text { color: var(--black); }
 .small { font-size: 0.85rem; }
 
 /* Layout */
@@ -579,4 +581,140 @@ h1, h2, h3, p {
   display: grid;
   place-items: center;
   font-weight: 600;
+}
+
+/* Cards shown inside the chat */
+.chat-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.chat-card-title {
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.chat-loading {
+  color: var(--black);
+  font-style: italic;
+}
+
+.chat-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.chat-table th {
+  text-align: left;
+  color: var(--black);
+  font-weight: 600;
+  padding: 0.4rem 0.3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.chat-table td {
+  padding: 0.5rem 0.3rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.chat-table .right {
+  text-align: right;
+}
+
+.chat-accounts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.chat-account {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-amount {
+  font-weight: 700;
+}
+
+.chat-amount.negative {
+  color: var(--red);
+}
+
+.chat-chart {
+  height: 200px;
+}
+
+.cat-row {
+  margin-bottom: 0.6rem;
+}
+
+.cat-head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+}
+
+.cat-track {
+  height: 8px;
+  background: #f1ede7;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.cat-fill {
+  height: 100%;
+  background: var(--green);
+  border-radius: 999px;
+}
+
+.approval-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.35rem 0.9rem;
+  margin: 0 0 0.8rem;
+}
+
+.approval-grid dt {
+  color: var(--black);
+}
+
+.approval-grid dd {
+  margin: 0;
+}
+
+.approval-grid dd.income {
+  color: var(--green);
+  font-weight: 600;
+}
+
+.approval-grid dd.expense {
+  color: var(--red);
+  font-weight: 600;
+}
+
+.approval-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.btn-secondary {
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 12px;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  font: inherit;
+}
+
+.btn-secondary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }

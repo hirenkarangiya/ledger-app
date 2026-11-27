@@ -4,15 +4,9 @@ import { useAccounts } from '../hooks/useAccounts';
 import { useTransactions } from '../hooks/useTransactions';
 import type { TransactionFilters } from '../api/types';
 import { formatINR } from '../utils/format';
+import { badgeTone } from '../utils/badge';
 
 const PAGE_SIZE = 10;
-
-const BADGE_TONES = ['badge-blue', 'badge-amber', 'badge-green', 'badge-purple', 'badge-pink', 'badge-cyan'];
-
-function badgeTone(name: string) {
-  const sum = [...name].reduce((total, ch) => total + ch.charCodeAt(0), 0);
-  return BADGE_TONES[sum % BADGE_TONES.length];
-}
 
 export default function TransactionTable() {
   const [filters, setFilters] = useState<TransactionFilters>({ page: 1, limit: PAGE_SIZE });

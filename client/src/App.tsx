@@ -5,6 +5,9 @@ import MonthlyChart from './components/MonthlyChart';
 import CategoryDonut from './components/CategoryDonut';
 import AddTransactionForm from './components/AddTransactionForm';
 import TransactionTable from './components/TransactionTable';
+import ChatRenderers from './copilot/ChatRenderers';
+import AddTransactionApproval from './copilot/AddTransactionApproval';
+import { CopilotSidebar } from '@copilotkit/react-core/v2';
 
 const currentYear = new Date().getFullYear();
 
@@ -48,6 +51,10 @@ export default function App() {
           <TransactionTable />
         </div>
       </main>
+
+      <CopilotSidebar />
+      <ChatRenderers />
+      <AddTransactionApproval />
     </div>
   );
 }

@@ -12,9 +12,7 @@ A fullstack personal finance app for tracking bank accounts, income, and expense
 ![Transactions table with filters](./docs/transactions.png)
 
 ### AI assistant: tables and charts in chat
-| Recent transactions | Monthly summary |
-|---|---|
-| ![Transactions in chat](./docs/assistant-table.png) | ![Monthly chart in chat](./docs/assistant-chart.png) |
+![Transactions in chat](./docs/assistant-table.png)
 
 ### AI assistant: approval before saving
 ![Approval card before a transaction is saved](./docs/approval-card.png)
